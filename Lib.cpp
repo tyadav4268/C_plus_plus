@@ -90,13 +90,3 @@ int menu(){
   cin>>choice;
   return choice;
 }
-
-
-
-removeBook();
-
-showAllUsers();
-
-deleteUser();
-
-modifyUser();

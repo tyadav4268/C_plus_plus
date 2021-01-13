@@ -3,14 +3,16 @@
 #include<string.h>
 #include<stdlib.h>
 #include<fstream>
+#include<string>
 using namespace std;
 
 void showAllBooks();
 void addBook();
+void removeBook();
 
 int main(){
   // showAllBooks();
-  addBook();
+  removeBook();
   return 0;
 }
 void showAllBooks(){
@@ -73,4 +75,21 @@ void addBook(){
   char *finalcmd = strcat(cmd, dest);
   cout<<"Executing command: "<<finalcmd<<endl;
   system(finalcmd);
+
   }
+
+void removeBook(){
+    showAllBooks();
+    char name[255];
+    cout<<"Enter the book name from the above list: ";
+    cin>>name;
+    char del[255] = "del Resources\\";
+    char *cmd = strcat(del, name);
+    cout<<"Executing command: "<<cmd<<"\n";
+    if(system(cmd)){
+        cout<<"\nUnsuccessful!";
+    }
+    else{
+        cout<<"\nSuccessfull";
+        }
+    }
