@@ -87,7 +87,15 @@ int menu(){
   cout<<"\n6. Modify an User's Details";
   cout<<"\n7. Exit";
   cout<<"Enter Your Choice: ";
-  cin>>choice;
+  
+  do      
+  {
+    cin>>choice;
+    if((choice<1) || (choice>7)){
+      cout<<"Invalid input! Please try again. \nEnter Your Choice: ";
+    }
+  }while((choice<1) || (choice>7));
+  
   return choice;
 }
 
